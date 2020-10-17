@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document HW3 */
+
+song {display:block; border-bottom: 1px solid #877ceb; padding: 5px;
+      font-family: serif; background: #F1F1D4; }
+song title {font-size: 30 px; font-weight: 650;}
+
+song artist { font-size: 15px;
+  margin: 4px 0; padding-left: 1px; color: #d4af37; text-transform: uppercase;}
+song title { font-size: x-large; margin-bottom: 1px }
+song year { display:block; font-size: 13px;
+  text-align: justify; position: relative; left: 30px}
+song genre { display: block; font-size: 13px; font-style: italic;
+  font-style: bold; position: relative; left: 30px }

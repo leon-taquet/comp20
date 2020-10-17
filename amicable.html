@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Are they Amicable?</title>
+    <script type="text/javascript">
+            window.onload = function()
+            {
+                function isFactor(num, factor)
+                {
+                        if ( (num % factor) == 0 )
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                }
+                function showArray(arr)
+                {
+                    var result = "";
+                    for (var i = 0; i < arr.length; i++){
+                        result += arr[i] + " ";
+                    }
+                    document.getElementById("output").innerHTML = result;
+                }
+                function addArray(arr)
+                {
+                    var result = 0;
+                    for (var i = 0; i < arr.length; i++){
+                        result += arr[i];
+                    }
+                    return result;
+                }
+                function getFactors(num)
+                {
+                    var arr = new Array;
+                    for (var i = 1; i < num; i++){
+                        if ( isFactor(num, i) ) {
+                            arr.push(i);
+                        }
+                    }
+                    return arr;
+                }
+                function isAmicable(num1, num2)
+                {
+                        arr1 = getFactors(num1);
+                        arr2 = getFactors(num2);
+                        sum1 = addArray(arr1);
+                        sum2 = addArray(arr2);
+                        if (sum1 == num2 && sum2 == num1)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                }
+                document.getElementById("amicable").onclick = function ()
+                {
+
+                    num1 = document.form1.num1.value;
+                    num2 = document.form1.num2.value;
+                    result = num1 + " and " + num2;
+                    /*
+                    if (isFactor(num1, num2)){
+                        result += " is a factor <br/>";
+                    }
+                    if (!isFactor(num1, num2)){
+                        result += " is a not factor <br/>";
+                    }
+                    */
+
+                    //arr = [1, 2, 3, 4, 5];
+                    //showArray(arr);
+                    //addArray(arr);
+                    //arr = getFactors(num1);
+                    //showArray(arr);
+
+                    if (isAmicable(num1, num2)){
+                        result += " are amicable <br/>";
+                    }
+                    else
+                    {
+                        result += " are not amicable <br/>";
+                    }
+                    document.getElementById("output").innerHTML = result;
+
+                }
+
+            }
+    </script>
+</head>
+<body>
+    <form name="form1" >
+        Enter First Number: &nbsp; &nbsp; <input type="text" name="num1" id="num-1">
+        <br/>
+        Enter Second Number: <input type="text" name="num2" id="num-2">
+        <br/>
+        <input type="button" name="butn1" value="Amicable?" id = "amicable">
+    </form>
+    <hr>
+
+    <div id = "output">&nbsp;</div>
+
+</body>
+</html>

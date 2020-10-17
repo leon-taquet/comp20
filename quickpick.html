@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        body {font-size: 25px; font-family: ariel; color: #000;}
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+        function addNonRepeat(numbers)
+        {
+            range = (46 - 1) + 1;
+            var new_num = 1 + (Math.random() * range);
+            var is_repeat = 0;
+            for(var i = 0; i < numbers.length; i++){
+                if (numbers[i] == new_num){
+                    is_repeat = 1;
+                }
+            }
+            if (is_repeat){
+                return addNonRepeat(numbers)
+            }else{
+                return numbers.push(parseInt(new_num));
+            }
+        }
+
+        var range;
+        var number = new Array;
+        for (var i = 0; i < 5;  i++){
+            addNonRepeat(number);
+        }
+
+        number.sort();
+        range = (18 - 1) + 1;
+        lucky_ball =  1 + (Math.random() * range);
+        //document.write("Lucky Ball: " + lucky_ball.toFixed(0) + " ");
+        var winners_input = prompt("Enter the winning numbers: ", "");
+        var luck_winner = prompt("Enter Lucky Ball Number: ", "");
+
+        var winners = winners_input.split(" ");
+        winners.sort();
+
+
+        var counter = 0;
+        var lucky_win = (lucky_ball == lucky_win);
+        var j;
+        for(i = 0; i < 5; i++){
+            for(j = 0; j < 5; j++){
+                if(winners[i] == number[j]){
+                    counter+=1;
+                }
+            }
+        }
+        document.write("The quick pick numbers are: ");
+        for (i = 0; i < 5;  i++){
+            document.write(number[i].toFixed(0) + " ");
+        }
+        document.write('<br>' + "The lucky ball number is " + lucky_ball.toFixed(0) + '<br><br>');
+
+        document.write("The winning numbers are: ");
+
+        for (i = 0; i < 5;  i++){
+            document.write(winners[i] + " ");
+        }
+        document.write('<br>' + "The lucky ball number is " + luck_winner  + '<br><br>');
+
+        var payout = 0;
+        payouts_nolucky = ["0", "0", "3", "20", "200", "25,000 A YEAR FOR LIFE"];
+        payouts_lucky = ["4", "6", "25", "150", "5000", "7,000 A WEEK FOR LIFE"];
+
+        if (lucky_win){
+            payout = payouts_lucky[counter];
+        }
+        else{
+            payout = payouts_nolucky[counter];
+        }
+
+        document.write("You win! Your payout is: $" + payout);
+
+
+
+    </script>
+  </body>
+</html>

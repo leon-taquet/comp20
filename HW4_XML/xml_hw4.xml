@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href = "setListStyle.css" ?>
+<Songs>
+<song>
+  <title> Bohemian Rhapsody </title>
+  <artist> Queen </artist>
+  <year> 1975 </year>
+  <genre> Rock </genre>
+</song>
+
+<song>
+  <title> Old Time Rock and Roll </title>
+  <artist> Bob Segar </artist>
+  <year> 1978 </year>
+  <genre> Rock </genre>
+</song>
+
+<song>
+  <title> Joe </title>
+  <artist> Alabama Shakes </artist>
+  <year> 2015 </year>
+  <genre> Indie Rock </genre>
+</song>
+
+<song>
+  <title> Where You're At </title>
+  <artist> Allen Stone </artist>
+  <year> 2016 </year>
+  <genre> Soul </genre>
+</song>
+
+<song>
+  <title> Julia </title>
+  <artist> Mt. Joy </artist>
+  <year> 2018 </year>
+  <genre> Indie Rock </genre>
+</song>
+
+<song>
+  <title> American Money </title>
+  <artist> BØRNS </artist>
+  <year> 2015 </year>
+  <genre> Indie Pop </genre>
+</song>
+
+<song>
+  <title> The Prowl </title>
+  <artist> Dan Auerbach </artist>
+  <year> 2009 </year>
+  <genre> Rock </genre>
+</song>
+
+<song>
+  <title> One of These Days </title>
+  <artist> Vance Joy </artist>
+  <year> 2018 </year>
+  <genre> Indie Folk </genre>
+</song>
+
+<song>
+  <title> Thinkin About You </title>
+  <artist> Frank Ocean </artist>
+  <year> 2012 </year>
+  <genre> Pop </genre>
+</song>
+
+<song>
+  <title> Jackie and Wilson </title>
+  <artist> Hozier </artist>
+  <year> 2014 </year>
+  <genre> Indie </genre>
+</song>
+
+</Songs>
